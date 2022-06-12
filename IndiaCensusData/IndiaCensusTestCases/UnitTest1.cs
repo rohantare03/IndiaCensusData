@@ -5,7 +5,7 @@ namespace IndiaCensusTestCases
 {
     public class Tests
     {
-        string folderPath = @"C:\Users\Rohan\Desktop\New folder\IndianCensusPractice\CsvFile\";
+        string folderPath = @"C:\Bridgelabz147\IndiaCensusData\IndiaCensusData\IndiaCensusData\CsvFile\";
         string validStateCensusFileState = "IndiaStateCensusData.csv";
         string invalideExtensionFileState = "IndiaStateCode.txt";
         string invalidDelimiterFileState = "DelimiterIndiaStateCensusData.csv";       

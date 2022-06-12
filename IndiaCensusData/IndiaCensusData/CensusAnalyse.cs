@@ -44,7 +44,10 @@ namespace IndiaCensusData
                     throw new CensusAnalyserException(CensusAnalyserException.Exceptiontype.DELIMETER_NOT_FOUND, "Delimeter Not Found");
                 }
                 string[] column = row.Split(',');
-                datamap.Add(column[0], new StateCensusData(column[0], column[1], column[2], column[3]));
+                if (csvFilePath.Contains("IndiaStateCode"))
+                    datamap.Add(column[0], new StateCensusData(new CensusCode(column[0], column[1], column[2], column[3])));
+                else
+                    datamap.Add(column[0], new StateCensusData(column[0], column[1], column[2], column[3]));
             }
             return datamap;
         }
